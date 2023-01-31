@@ -26,7 +26,7 @@ public class Main {
         else{
             throw new Exception("Некорректный знак действия");
         }
-        if(data[0].length()<12 & data[1].length()<12) {
+        if(data[0].length()<=12 & data[1].length()<=12) {
             if (action == '*' || action == '/') {
                 if (data[1].contains("\"")) throw new Exception("Строчку можно делить или умножать только на число");
             }
