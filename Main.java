@@ -37,6 +37,7 @@ public class Main {
                 printInQuotes(data[0] + data[1]);
             } else if (action == '*') {
                 int multiplier = Integer.parseInt(data[1]);
+                if (multiplier<1 || multiplier>10) throw new Exception("Можно использовать числа от 1 до 10");
                 String result = "";
                 for (int i = 0; i < multiplier; i++) {
                     result += data[0];
@@ -53,6 +54,8 @@ public class Main {
                 }
             } else {
                 int newLen = data[0].length() / Integer.parseInt(data[1]);
+                int divider = Integer.parseInt(data[1]);
+                if (divider<1 || divider>10) throw new Exception("Можно использовать числа от 1 до 10");
                 String result = data[0].substring(0, newLen);
                 printInQuotes(result);
             }
